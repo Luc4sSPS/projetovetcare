@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETCARE</title>
+    <link rel="stylesheet" href="../styles/00-index.css">
+</head>
+<body>
+    <!--CABEÇALHO DO SITE-->
+    <header class="cabecalho">
+        <nav class="navbar">
+            <div class="logo"> <!--LOGO DO SITE-->
+                <a href="../pages/00-index.html" class="logo-site">
+                    <img class="lg" src="../images/vetcareicon.png" alt="Logo" id="page-logo">
+                </a> 
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu"> <!--MENU SANDUÍCHE-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-list"> <!--LINKS DO SITE-->
+                <li><a href="../pages/02-sobre.html" target="iframe_paginas">SOBRE A CLÍNICA</a></li>
+                <li><a href="../pages/03-servicos.html" target="iframe_paginas">SERVIÇOS E IDEAIS</a></li>
+                <li><a href="../pages/04-contatos.html" target="iframe_paginas">CONTATOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--CONTEÚDO PRINCIPAL DO SITE-->
+    <main class="principal">
+        <div class="iframe-principal"> <!--ÁREA DO CONTEÚDO PRINCIPAL-->
+            <iframe src="/pages/01-home.html" name="iframe_paginas" id="meuIframe" class="iframe-page" title="VETCARE" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <!--RODAPÉ DO SITE-->
+    <footer>
+        <div class="rodape">
+            <p><a href="../pages/05-creditos.html" target="iframe_paginas">&copy; 2026 VETCARE - TODOS OS DIREITOS RESERVADOS AOS SEUS RESPECTIVOS DONOS.</a></p>
+        </div>
+    </footer>
+
+    <!--CONEXÃO ENTRE HTML E JS-->
+    <script src="../scripts/00-index.js"></script>
+</body>
+</html>

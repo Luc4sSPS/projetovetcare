@@ -1,0 +1,136 @@
+/*ESTILIZAÇÃO GLOBAL (TUDO CERTO)*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*POSICIONAMENTO DO RODAPÉ NO FIM DA TELA*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*O CORPO OCUPA TODA A PÁGINA*/
+}
+
+/*OCULTAÇÃO DA BARRA DE ROLAGEM*/
+body::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+    -ms-overflow-style: none; /*INTERNET EXPLORER E EDGE*/
+    scrollbar-width: none; /*FIREFOX*/
+}
+
+/*ESTILIZAÇÃO DO CABEÇALHO*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #082f29;
+    padding: 15px 30px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.lg{
+    display: flex;
+    width: 10%;
+    height: 10%
+}
+
+/*MENU SANDUÍCHE*/
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/*ESTILIZAÇÃO DO IFRAME DO CONTEÚDO PRINCIPAL*/
+.principal{
+    flex: 1; /*ESTÁTICO*/
+    padding: 0px;
+    text-align: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.iframe-page{
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /*BARRA DE ROLAGEM APARECE CASO HAJA ULTRAPASSAGEM DO LIMITE DE ALTURA DO CONTEÚDO*/
+    -ms-overflow-style: none; /*BARRA DE ROLAGEM OCULTA (INTERNET EXPLORER E EDGE)*/
+    scrollbar-width: none; /*BARRA DE ROLAGEM OCULTA (FIREFOX)*/
+}
+
+.iframe-page::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+}
+
+.iframe-page iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%; /*RESERVA DO ESPAÇO DO CABEÇALHO E DO RODAPÉ*/
+    border: none; /*REMOÇÃO DA BARRA DO IFRAME*/
+    /*em certos casos, pode ser necessário aplicar também um overflow: hidden*/
+}
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
+footer{
+    background-color: #082f29;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: auto;
+}
+
+.rodape p{
+    font-size: 0.9rem;
+}
+
+.rodape a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*RESPONSIVIDADE (TELAS ATÉ 768px)*/
+@media (max-width: 768px){
+    .menu-toggle{ display: flex; }
+
+    .nav-links{
+        display: none; /*OCULTAÇÃO DO MENU ORIGINAL*/
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        background-color: #111;
+        text-align: center;
+        padding: 15px 0px;
+    }
+    .nav-links.active{
+        display: flex; /*EXIBIÇÃO DO MENU QUANDO ATIVO*/
+    }
+}

@@ -1,0 +1,23 @@
+/*ESTILIZAÇÃO GLOBAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*POSICIONAMENTO DO RODAPÉ NO FIM DA TELA + ESTILIZAÇÃO DO FUNDO*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*O CORPO OCUPA TODA A PÁGINA*/
+    background-color: #fff6ed;
+}
+
+/*OCULTAÇÃO DA BARRA DE ROLAGEM*/
+body::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+    -ms-overflow-style: none; /*INTERNET EXPLORER E EDGE*/
+    scrollbar-width: none; /*FIREFOX*/
+}

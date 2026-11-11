@@ -1,0 +1,154 @@
+/*ESTILIZAÇÃO GLOBAL (TUDO CERTO)*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*POSICIONAMENTO DO RODAPÉ NO FIM DA TELA + ESTILIZAÇÃO DO FUNDO*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*O CORPO OCUPA TODA A PÁGINA*/
+    background-image: url(../images/fundohome.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/*OCULTAÇÃO DA BARRA DE ROLAGEM*/
+body::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+    -ms-overflow-style: none; /*INTERNET EXPLORER E EDGE*/
+    scrollbar-width: none; /*FIREFOX*/
+}
+
+/*ESTILIZAÇÃO DA ÁREA DO CONTEÚDO PRINCIPAL*/
+.inicio {
+    flex: 1; /*ESTÁTICO*/
+    padding: 0px;
+    text-align: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/*ESTILIZAÇÃO GERAL DA APRESENTAÇÃO*/
+.apresentacao {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+/*ESTILIZAÇÃO GERAL DOS PETS*/
+.animais {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-self: stretch;
+    min-width: 0;
+}
+
+.animais img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/*ESTILIZAÇÃO DOS PETS À ESQUERDA DO CONTEÚDO CENTRAL*/
+.animais-esquerda img {
+    width: 330px;
+}
+
+/*ESTILIZAÇÃO DO CONTEÚDO CENTRAL*/
+.conteudo-central {
+    text-align: center;
+    align-self: start;
+    padding-top: 15px;
+}
+
+.logo{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.conteudo-central h2 {
+    font-size: clamp(19px, 2.1vw, 34px);
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.conteudo-central p {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: clamp(20px, 2vw, 32px);
+    line-height: 1.42;
+}
+
+/*ESTILIZAÇÃO DOS PETS À DIREITA DO CONTEÚDO CENTRAL*/
+.animais-direita img {
+    width: 400px;
+}
+
+/*RESPONSIVIDADE (TELAS ATÉ 768px)*/
+@media (max-width: 768px){
+    .apresentacao {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "conteudo conteudo"
+            "esquerda direita";
+
+        grid-template-rows: 1fr auto;
+        gap: 20px 5px;
+        padding: 20px 10px 0;
+    }
+
+    .conteudo-central {
+        grid-area: conteudo;
+        padding-top: 20px;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 130px;
+    }
+
+    .conteudo-central h2 {
+        font-size: clamp(17px, 4vw, 25px);
+        margin-bottom: 35px;
+    }
+
+    .conteudo-central p {
+        max-width: 280px;
+        font-size: clamp(17px, 3.5vw, 23px);
+    }
+
+    .animais {
+        align-self: end;
+        min-width: 0;
+    }
+
+    .animais-esquerda {
+        grid-area: esquerda;
+    }
+
+    .animais-direita {
+        grid-area: direita;
+    }
+
+    .animais-esquerda img {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .animais-direita img {
+        width: 100%;
+        max-width: 250px;
+    }
+}

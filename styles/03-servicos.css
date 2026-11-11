@@ -1,0 +1,180 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*O CORPO OCUPA TODA A PÁGINA*/
+    background-color: #fff6ed;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.introducao {
+    width: 50%;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 1.4;
+    padding: 42px 10px;
+}
+
+.titulo {
+    width: 50%;
+    background: linear-gradient(
+        to bottom,
+        #2caf96,
+        #009bb5
+    );
+    text-align: center;
+    font-size: 5vw;
+    font-weight: bold;
+    padding: 45px 10px;
+}
+
+/* Área dos serviços */
+.servicos {
+    width: 100%;
+    padding: 100px 5.6%;
+}
+
+/* Cada serviço */
+.servico {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/* Primeiro serviço */
+.atendimento {
+    justify-content: flex-start;
+}
+
+/* Segundo serviço */
+.vacinacao {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Ícones circulares */
+.icone {
+    width: 185px;
+    height: 185px;
+    min-width: 185px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.icone i {
+    font-size: 65px;
+    color: #000;
+}
+
+.icone i:last-child {
+    font-size: 35px;
+}
+
+/* Textos */
+.descricao h2 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+}
+
+.descricao p {
+    font-size: 2.4vw;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .introducao,
+    .titulo {
+        width: 100%;
+    }
+
+    .introducao {
+        font-size: 22px;
+        padding: 25px 10px;
+    }
+
+    .titulo {
+        font-size: 34px;
+        padding: 25px 10px;
+    }
+
+    .servicos {
+        padding: 50px 20px;
+    }
+
+    .servico {
+        gap: 15px;
+        margin-bottom: 65px;
+    }
+
+    .icone {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+    }
+
+    .icone i {
+        font-size: 35px;
+    }
+
+    .icone i:last-child {
+        font-size: 20px;
+    }
+
+    .descricao h2 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+
+    .descricao p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .servico {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vacinacao {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .descricao h2 {
+        font-size: 22px;
+    }
+
+    .descricao p {
+        font-size: 15px;
+    }
+}
