@@ -21,3 +21,95 @@ body::-webkit-scrollbar{
     -ms-overflow-style: none; /*INTERNET EXPLORER E EDGE*/
     scrollbar-width: none; /*FIREFOX*/
 }
+
+/* Conteúdo principal */
+.creditos {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+/* Seções */
+.creditos section {
+    margin-bottom: 40px;
+}
+
+/* Títulos principais */
+.creditos h1 {
+    font-size: 26px;
+    color: #003b32;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #003b32;
+}
+
+/* Referências */
+.refere {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Títulos das referências */
+.refere h2 {
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Endereços */
+.refere p {
+    font-size: 14px;
+    color: #557565;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    margin-bottom: 10px;
+}
+
+/* Datas de acesso */
+.refere h4 {
+    font-size: 13px;
+    color: #777;
+    font-weight: normal;
+}
+
+/* Agradecimento especial */
+.agradecimentoAna {
+    padding: 20px;
+    background-color: #e5f1e9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.agradecimentoAna h2 {
+    font-size: 16px;
+    color: #34785b;
+    line-height: 1.7;
+    font-weight: normal;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .creditos h1 {
+        font-size: 22px;
+    }
+
+    .refere h2 {
+        font-size: 15px;
+    }
+
+    .refere p {
+        font-size: 12px;
+    }
+
+    .agradecimentoAna h2 {
+        font-size: 14px;
+    }
+}

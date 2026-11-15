@@ -10,7 +10,20 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /*O CORPO OCUPA TODA A PÁGINA*/
-    background-color: #fff6ed;
+    background-image: url(../images/fundohome.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+}
+
+/*OCULTAÇÃO DA BARRA DE ROLAGEM*/
+body::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+    -ms-overflow-style: none; /*INTERNET EXPLORER E EDGE*/
+    scrollbar-width: none; /*FIREFOX*/
 }
 
 /* Cabeçalho */
@@ -24,7 +37,7 @@ body {
 .introducao {
     width: 100%;
     text-align: center;
-    font-size: 3vw;
+    font-size: 40px;
     line-height: 1.4;
     padding: 42px 10px;
 }
@@ -67,7 +80,7 @@ body {
     min-width: 185px;
     background-color: #fff;
     border-radius: 50%;
-
+    border: 10px solid #003b32;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +101,7 @@ body {
 .descricao h2 {
     font-size: 40px;
     margin-bottom: 20px;
+    color: #003b32;
 }
 
 .descricao p {
