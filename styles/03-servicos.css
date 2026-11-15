@@ -22,24 +22,11 @@ body {
 }
 
 .introducao {
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-size: 3vw;
     line-height: 1.4;
     padding: 42px 10px;
-}
-
-.titulo {
-    width: 50%;
-    background: linear-gradient(
-        to bottom,
-        #2caf96,
-        #009bb5
-    );
-    text-align: center;
-    font-size: 5vw;
-    font-weight: bold;
-    padding: 45px 10px;
 }
 
 /* Área dos serviços */
@@ -63,9 +50,14 @@ body {
 }
 
 /* Segundo serviço */
-.vacinacao {
+.exame {
     justify-content: flex-end;
     text-align: right;
+}
+
+/* Terceiro serviço */
+.vacinacao {
+    justify-content: flex-start;
 }
 
 /* Ícones circulares */
@@ -94,12 +86,12 @@ body {
 
 /* Textos */
 .descricao h2 {
-    font-size: 4vw;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
 .descricao p {
-    font-size: 2.4vw;
+    font-size: 40px;
     line-height: 1.4;
 }
 
@@ -165,7 +157,7 @@ body {
         text-align: center;
     }
 
-    .vacinacao {
+    .exame {
         flex-direction: column-reverse;
         text-align: center;
     }
